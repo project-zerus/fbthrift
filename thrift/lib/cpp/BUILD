@@ -1,0 +1,83 @@
+cc_library(
+  name = 'cpp',
+  extra_cppflags = [
+    '-Wno-sign-compare',
+    '-Wno-unused-result',
+    '-Wno-vla',
+  ],
+  srcs = [
+    'EventHandlerBase.cpp',
+    'Thrift.cpp',
+    'TApplicationException.cpp',
+    'VirtualProfiling.cpp',
+    'ShutdownSocketSet.cpp',
+
+    'async/TAsyncServerSocket.cpp',
+    'async/TAsyncSignalHandler.cpp',
+    'async/TAsyncSocket.cpp',
+    'async/TAsyncSSLSocket.cpp',
+    'async/TAsyncTimeoutSet.cpp',
+    'async/TEventBaseManager.cpp',
+
+    'concurrency/Mutex.cpp',
+    'concurrency/Monitor.cpp',
+    'concurrency/NumaThreadManager.cpp',
+    'concurrency/PosixThreadFactory.cpp',
+    'concurrency/ThreadManager.cpp',
+    'concurrency/TimerManager.cpp',
+    'concurrency/Util.cpp',
+    'concurrency/Codel.cpp',
+
+    'processor/PeekProcessor.cpp',
+
+    'protocol/TDebugProtocol.cpp',
+    'protocol/TJSONProtocol.cpp',
+    'protocol/TBase64Utils.cpp',
+    'protocol/TMultiplexedProtocol.cpp',
+
+    'server/TServer.cpp',
+
+    'ssl/SSLUtils.cpp',
+
+    'transport/TTransportException.cpp',
+    'transport/TFDTransport.cpp',
+    'transport/TFileTransport.cpp',
+    'transport/TSimpleFileTransport.cpp',
+    'transport/THeader.cpp',
+    'transport/THeaderTransport.cpp',
+    'transport/THttpTransport.cpp',
+    'transport/THttpClient.cpp',
+    'transport/THttpServer.cpp',
+    'transport/TSocket.cpp',
+    'transport/TSSLSocket.cpp',
+    'transport/TSocketPool.cpp',
+    'transport/TServerSocket.cpp',
+    'transport/TSSLServerSocket.cpp',
+    'transport/TTransportUtils.cpp',
+    'transport/TBufferTransports.cpp',
+    'transport/TZlibTransport.cpp',
+
+    'util/FdUtils.cpp',
+    'util/PausableTimer.cpp',
+    'util/THttpParser.cpp',
+    'util/ScopedServerThread.cpp',
+    'util/SocketRetriever.cpp',
+    'util/VarintUtils.cpp',
+
+    'util/kerberos/Krb5Util.cpp',
+    'util/kerberos/Krb5OlderVersionStubs.cpp',
+    'util/kerberos/Krb5CredentialsCacheManager.cpp',
+    'util/kerberos/Krb5CCacheStore.cpp',
+    'util/kerberos/Krb5Tgts.cpp',
+  ],
+  deps = [
+    '#com_err',
+    '#dl',
+    '#gssapi_krb5',
+    '#krb5',
+    '#numa',
+    '#pthread',
+    '#rt',
+    '//fbthrift:headers',
+  ]
+)

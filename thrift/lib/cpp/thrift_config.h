@@ -463,9 +463,6 @@
 #define THRIFT_LT_OBJDIR ".libs/"
 #endif
 
-/* Define to 1 if your C compiler doesn't accept -c and -o together. */
-/* #undef NO_MINUS_C_MINUS_O */
-
 /* Name of package */
 #ifndef THRIFT_PACKAGE
 #define THRIFT_PACKAGE "thrift"
@@ -483,7 +480,7 @@
 
 /* Define to the full name and version of this package. */
 #ifndef THRIFT_PACKAGE_STRING
-#define THRIFT_PACKAGE_STRING "thrift 1.0"
+#define THRIFT_PACKAGE_STRING "thrift 9.0"
 #endif
 
 /* Define to the one symbol short name of this package. */
@@ -498,7 +495,7 @@
 
 /* Define to the version of this package. */
 #ifndef THRIFT_PACKAGE_VERSION
-#define THRIFT_PACKAGE_VERSION "1.0"
+#define THRIFT_PACKAGE_VERSION "9.0"
 #endif
 
 /* Define as the return type of signal handlers (`int' or `void'). */
@@ -564,7 +561,7 @@
 
 /* Version number of package */
 #ifndef THRIFT_VERSION
-#define THRIFT_VERSION "1.0"
+#define THRIFT_VERSION "9.0"
 #endif
 
 /* Define to 1 if `lex' declares `yytext' as a `char *' by default, not a
