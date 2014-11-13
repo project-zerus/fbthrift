@@ -1,0 +1,1 @@
+#define THRIFT_VERSION "13.0"

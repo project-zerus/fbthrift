@@ -1,0 +1,32 @@
+cc_library(
+  name = 'cpp2',
+  warning = 'no',
+  srcs = [
+    'Version.cpp',
+    'async/HeaderClientChannel.cpp',
+    'async/StubSaslClient.cpp',
+    'async/StubSaslServer.cpp',
+    'async/GssSaslClient.cpp',
+    'async/GssSaslServer.cpp',
+    'async/Cpp2Channel.cpp',
+    'async/AsyncProcessor.cpp',
+    'async/DuplexChannel.cpp',
+    'protocol/Serializer.cpp',
+    'protocol/DebugProtocol.cpp',
+    'security/KerberosSASLHandshakeClient.cpp',
+    'security/KerberosSASLHandshakeServer.cpp',
+    'security/KerberosSASLHandshakeUtils.cpp',
+    'security/KerberosSASLThreadManager.cpp',
+    'security/SecurityKillSwitch.cpp',
+    'async/HeaderServerChannel.cpp',
+    'server/Cpp2Connection.cpp',
+    'server/Cpp2Worker.cpp',
+    'server/ThriftServer.cpp',
+    'gen-cpp2/Sasl_constants.cpp',
+    'gen-cpp2/Sasl_types.cpp',
+    'gen-cpp2/SaslAuthService.cpp',
+  ],
+  deps = [
+    '//fbthrift/thrift/lib/cpp:cpp',
+  ]
+)
