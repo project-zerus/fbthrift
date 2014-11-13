@@ -7,7 +7,7 @@
   <packaging>jar</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <thrift.version>13.0</thrift.version>
+    <thrift.version>13.0-SNAPSHOT</thrift.version>
   </properties>
   <prerequisites>
     <maven>3.0</maven>
