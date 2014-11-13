@@ -1,13 +1,24 @@
-cc_binary(
-  name = 'thrift1',
+cc_library(
+  name = 'common',
   warning = 'no',
   srcs = [
     'common.cc',
-    'main.cc',
     'thriftl.cc',
     'thrifty.cc',
     'parse/t_type.cc',
     'parse/t_typedef.cc',
+  ],
+  deps = [
+    '//fbthrift:headers',
+    '//folly:folly',
+  ]
+)
+
+cc_binary(
+  name = 'thrift1',
+  warning = 'no',
+  srcs = [
+    'main.cc',
     'generate/t_cocoa_generator.cc',
     'generate/t_cpp_generator.cc',
     'generate/t_csharp_generator.cc',
@@ -31,6 +42,7 @@ cc_binary(
     'generate/t_xsd_generator.cc',
   ],
   deps = [
+    ':common',
     '//fbthrift:headers',
     '//folly:folly',
   ]
@@ -42,7 +54,9 @@ cc_plugin(
     'py/compiler.cc',
   ],
   deps = [
+    ':common',
     '//fbthrift:headers',
     '//folly:folly',
+    '//thirdparty/boost:python',
   ]
 )
